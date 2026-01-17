@@ -26,18 +26,21 @@ This project generates Cursor MDC (Markdown Cursor) rule files from a structured
 ## Installation
 
 1. Clone this repository:
+   
    ```bash
    git clone https://github.com/sanjeed5/awesome-cursor-rules-mdc.git
    cd awesome-cursor-rules-mdc
    ```
 
 2. Install dependencies using uv:
+   
    ```bash
    uv sync
    ```
 
 3. Set up environment variables:
    Create a `.env` file in the project root with your API keys (see `.env.example`):
+   
    ```
    EXA_API_KEY=your_exa_api_key
    GEMINI_API_KEY=your_google_gemini_api_key  # For Gemini
@@ -88,22 +91,27 @@ uv run src/generate_mdc_files.py --library react
 Adding support for new libraries is simple:
 
 1. **Edit the rules.json file**:
+   
    - Add a new entry to the `libraries` array:
-   ```json
-   {
+     
+     ```json
+     {
      "name": "your-library-name",
      "tags": ["relevant-tag1", "relevant-tag2"]
-   }
-   ```
+     }
+     ```
 
 2. **Generate the MDC files**:
+   
    - Run the generator script:
-   ```bash
-   uv run src/generate_mdc_files.py
-   ```
+     
+     ```bash
+     uv run src/generate_mdc_files.py
+     ```
    - The script automatically detects and processes new libraries
 
 3. **Contribute back**:
+   
    - Test your new rules with real projects
    - Consider raising a PR to contribute your additions back to the community
 
